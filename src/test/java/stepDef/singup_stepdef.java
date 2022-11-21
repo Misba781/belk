@@ -98,4 +98,8 @@ public class singup_stepdef extends Config {
 
     }
 
+    @And("i enter invalid Email  Formet")
+    public void iEnterInvalidEmailFormet() {
+        lp.enterEmailAddress("misbauddingmail.com");
+    }
 }

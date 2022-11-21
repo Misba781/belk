@@ -1,0 +1,168 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1010036000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "i am at belk Homepage",
+            "match": {
+              "location": "stepDef.singup_stepdef.iAmAtBelkTEKHomepage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-11-21T14:05:58.197Z",
+        "before": [
+          {
+            "result": {
+              "duration": 17556598000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDef.Hook.startTest()"
+            }
+          }
+        ],
+        "line": 36,
+        "name": "Create a brand new user invalid Email  Formet",
+        "description": "",
+        "id": "signup;create-a-brand-new-user-invalid-email--formet",
+        "after": [
+          {
+            "result": {
+              "duration": 3902000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDef.Hook.endTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 501543000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "i click on errow",
+            "match": {
+              "location": "stepDef.singup_stepdef.iclickocrrow()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 686019000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "i click on manu bar",
+            "match": {
+              "location": "stepDef.singup_stepdef.iclickonmanubar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7816222000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "i click on Create Account",
+            "match": {
+              "location": "stepDef.singup_stepdef.iclickonCreateAccount()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1108512000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "i enter first Name",
+            "match": {
+              "location": "stepDef.singup_stepdef.iEnterFirstName()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 569057000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "i  enter Last Name",
+            "match": {
+              "location": "stepDef.singup_stepdef.enterLastName()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14650147000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "i enter invalid Email  Formet",
+            "match": {
+              "location": "stepDef.singup_stepdef.iEnterInvalidEmailFormet()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1693252000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "i enter password",
+            "match": {
+              "location": "stepDef.singup_stepdef.enterPassword()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 738748000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "i enter conform password",
+            "match": {
+              "location": "stepDef.singup_stepdef.enterconformPassword()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test3"
+          }
+        ]
+      }
+    ],
+    "name": "signup",
+    "description": "",
+    "id": "signup",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/singup.feature",
+    "tags": []
+  }
+]

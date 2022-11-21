@@ -50,6 +50,11 @@ public class signup_page extends Config {
     @FindBy(how = How.CLASS_NAME, using = "account-welcome")
     public WebElement sucssFullyLoc;
 
+
+    @FindBy(how = How.XPATH,using = "//fieldset[@class='account-login-info']//div[3]/span[1]")
+    public WebElement verifyEmailErowLoc;
+
+
     public void verifyHomePageTitle() {
         String act = driver.getTitle();
         String exp = "Belk.com - Belk® - Official Site";
@@ -110,5 +115,12 @@ public class signup_page extends Config {
 
     public void enterEmailAddress(String email) {
         emailLoc.sendKeys(email);
+        String exp = "Please re‑enter your email address using the correct format (ex: name@email.com).";
+        String act = verifyEmailErowLoc.getText();
+        Assert.assertEquals(act, exp);
+        System.out.println("Verify Error for invalid email Format ");
+
     }
+
+
 }

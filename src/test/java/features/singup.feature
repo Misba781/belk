@@ -28,16 +28,24 @@ Feature: signup
     And i enter emailAddress
     And i enter password
     And i enter conform password
-    When i click on Create Account button
-    Then i should be able to login
+#    When i click on Create Account button
+#    Then i should be able to login
 
-#
-#    @login
-#    Scenario: login account
-#      And i click on errow
-#      And i click on manu bar
-#      And i enter emailAddress
-#     When i click on Sing In button
-#     Then i should be able to login
+  @test3
+
+  Scenario:Create a brand new user invalid Email  Formet
+
+    And i click on errow
+    And i click on manu bar
+    And i click on Create Account
+    And i enter first Name
+    And i  enter Last Name
+    And i enter invalid Email  Formet
+    And i enter password
+    And i enter conform password
+#    When i click on Create Account button
+#    Then i should be able to login
+
+
 
 
