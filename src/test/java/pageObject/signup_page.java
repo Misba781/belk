@@ -1,12 +1,21 @@
 package pageObject;
 
 import base.Config;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.awt.*;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+import java.time.Duration;
 
 public class signup_page extends Config {
 
@@ -51,9 +60,12 @@ public class signup_page extends Config {
     public WebElement sucssFullyLoc;
 
 
-    @FindBy(how = How.XPATH,using = "//fieldset[@class='account-login-info']//div[3]/span[1]")
+    @FindBy(how = How.XPATH, using = "//fieldset[@class='account-login-info']//div[3]/span[1]")
     public WebElement verifyEmailErowLoc;
 
+
+    @FindBy(how = How.XPATH, using = "//div[contains(@aria-label,'Press & Hold')]/div/p")
+    public WebElement HummanLoc;
 
     public void verifyHomePageTitle() {
         String act = driver.getTitle();
@@ -104,6 +116,7 @@ public class signup_page extends Config {
         AccountLoc.click();
 
     }
+
     //  clickAccountLoc
     public void sussfullAccount() {
 
@@ -122,5 +135,35 @@ public class signup_page extends Config {
 
     }
 
+    public void confirmarehuman() {
 
-}
+        try {
+            driver.switchTo().frame(0);
+            driver.switchTo().frame(0);
+            Robot robot = new Robot();
+            Actions act =new Actions(driver);
+
+            WebDriverWait wait = new  WebDriverWait(driver, Duration.ofSeconds(30));
+             wait.until(ExpectedConditions.elementToBeClickable(HummanLoc));
+            act.moveToElement(HummanLoc).perform();
+            // Simulate a mouse click
+            robot.mousePress(InputEvent.BUTTON1_MASK);
+            wait.until(ExpectedConditions.invisibilityOf(HummanLoc));
+            Thread.sleep(15000);
+            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+            // Simulate a key press
+            robot.keyPress(KeyEvent.VK_A);
+            robot.keyRelease(KeyEvent.VK_A);
+
+        } catch (AWTException HummanLoc) {
+            HummanLoc.printStackTrace();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+
+
+    }

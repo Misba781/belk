@@ -5,6 +5,7 @@ Feature: signup
 
   @test
   Scenario:Create a brand new user used java faker
+    And i click Humman robot
     And i click on errow
     And i click on manu bar
     And i click on Create Account

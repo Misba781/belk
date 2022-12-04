@@ -30,7 +30,7 @@ public class Config{
         }
         driver.manage().window().maximize();
 
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 
         return driver;
     }

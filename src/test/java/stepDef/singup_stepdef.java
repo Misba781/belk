@@ -8,11 +8,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.checkerframework.checker.index.qual.LessThan;
+import pageObject.login_page;
 import pageObject.signup_page;
+
+import java.awt.*;
 
 public class singup_stepdef extends Config {
 
     signup_page lp=new signup_page(driver);
+    login_page rr=new login_page (driver);
     Faker faker = new Faker();
 
     @Given("i am at belk Homepage")
@@ -101,5 +105,11 @@ public class singup_stepdef extends Config {
     @And("i enter invalid Email  Formet")
     public void iEnterInvalidEmailFormet() {
         lp.enterEmailAddress("misbauddingmail.com");
+        rr.LoginEmail("misbauddin1988@gmail.com");
+    }
+
+    @And("i click Humman robot")
+    public void iClickHummanRobot() throws AWTException {
+        lp.confirmarehuman();
     }
 }

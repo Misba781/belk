@@ -27,9 +27,6 @@ public class login_page extends Config {
 
     public void login(){
         loginLoc.click();
-    }
-    public void humanVerify(){
-
         String act = driver.getTitle();
         String exp = "Access to this page has been denied.";
         Assert.assertEquals(exp, act);

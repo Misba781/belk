@@ -16,8 +16,4 @@ public class login_stepdef extends Config {
     }
 
 
-    @And("i verify you are a human")
-    public void iVerifyYouAreAHuman() {
-    lp.humanVerify();
-    }
 }
